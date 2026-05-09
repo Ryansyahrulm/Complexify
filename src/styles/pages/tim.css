@@ -1,0 +1,120 @@
+.team-main {
+  position: relative;
+  z-index: 10;
+  flex-grow: 1;
+  padding-top: 48px;
+  padding-bottom: 96px;
+  padding-inline: 16px;
+  max-width: 1280px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .team-main {
+    padding-inline: 40px;
+  }
+}
+
+/* ---------- Team Grid ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-gutter);
+  justify-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---------- Team Card ---------- */
+.team-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  transition: transform 500ms ease, border-color 500ms ease, box-shadow 500ms ease;
+  cursor: default;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 203, 230, 0.5);
+  box-shadow: 0 0 40px rgba(0, 203, 230, 0.1);
+}
+
+/* ---------- Card Avatar Area ---------- */
+.team-card__avatar-wrap {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.team-card__glow {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 182, 212, 0.8);
+  border-radius: var(--radius-full);
+  filter: blur(40px);
+  opacity: 0.2;
+  transition: opacity 500ms ease;
+}
+
+.team-card:hover .team-card__glow {
+  opacity: 0.4;
+}
+
+.team-card__avatar {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.team-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-full);
+  display: block;
+}
+
+/* ---------- Card Info ---------- */
+.team-card__name {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+  font-weight: var(--font-weight-h3);
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+
+.team-card__role {
+  font-size: var(--font-size-label);
+  letter-spacing: var(--letter-spacing-label);
+  font-weight: var(--font-weight-label);
+  text-transform: uppercase;
+  color: rgba(199, 196, 216, 0.7);
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complexify — Selamat Datang di Dunia Bilangan Kompleks</title>
+  <meta name="description"
+    content="Complexify mengubah abstraksi matematika menjadi pengalaman visual intuitif. Kuasai bilangan kompleks melalui materi, game, dan kuis interaktif." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload Fonts -->
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" as="font"
+    type="font/woff2" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="src/styles/main.css" />
+  <link rel="stylesheet" href="src/styles/navbar.css" />
+  <link rel="stylesheet" href="src/styles/footer.css" />
+  <link rel="stylesheet" href="src/styles/pages/home.css" />
+
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      chtml: {
+        matchFontHeight: true
+      },
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <div id="navbar-root"></div>
+
+  <main class="page-main" id="main-content">
+    <section class="hero math-pattern" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content">
+
+            <h1 id="hero-title" class="hero__title reveal">
+              Selamat Datang di
+              <span class="text-gradient">Complexify</span>
+            </h1>
+
+            <p class="hero__subtitle reveal">
+              Temukan keindahan di balik bilangan imajiner. Kami mengubah abstraksi matematika
+              menjadi pengalaman visual yang intuitif, membantu Anda menguasai angka kompleks
+              melalui logika yang jernih.
+            </p>
+
+            <div class="hero__actions reveal">
+              <a href="materi.html" class="btn btn-primary-lg" id="hero-cta-primary">
+                <span>Mulai Belajar</span>
+                <span class="svg-icon" aria-hidden="true" style="-webkit-mask-image: url('./src/Assets/icons/arrow_forward.svg'); mask-image: url('./src/Assets/icons/arrow_forward.svg');"></span>
+              </a>
+              <a href="game.html" class="btn btn-outline-secondary" id="hero-cta-game">
+                <span class="svg-icon" aria-hidden="true" style="-webkit-mask-image: url('./src/Assets/icons/sports_esports.svg'); mask-image: url('./src/Assets/icons/sports_esports.svg');"></span>
+                <span>Coba Game</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <div class="blob blob-indigo hero__blob-1"></div>
+            <div class="blob blob-cyan hero__blob-2"></div>
+            <div class="hero__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&q=80"
+                alt="Visualisasi fraktal dan bilangan kompleks yang elegan" loading="lazy" width="800" height="800" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="bento-section" aria-labelledby="bento-title">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <h2 id="bento-title" class="text-h2">Mulai Perjalanan Anda</h2>
+        </header>
+
+        <div class="bento-grid">
+          <article class="glass-card bento-card bento-card--wide" id="bento-kurikulum">
+            <div>
+              <h3 class="bento-card__title">Kurikulum Terstruktur</h3>
+              <p class="bento-card__desc">
+                Dari definisi dasar hingga transformasi Fourier, pelajari langkah demi langkah
+                dengan panduan visual yang menakjubkan.
+              </p>
+            </div>
+            <div class="bento-card__footer">
+              <a href="materi.html" class="bento-card__link" id="bento-link-materi">
+                Lihat Materi
+                <span class="svg-icon" style="-webkit-mask-image: url('./src/Assets/icons/arrow_outward.svg'); mask-image: url('./src/Assets/icons/arrow_outward.svg'); font-size:16px;" aria-hidden="true"></span>
+              </a>
+            </div>
+          </article>
+          <article class="glass-card bento-card" id="bento-game">
+            <h3 class="bento-card__title">Game</h3>
+            <p class="bento-card__desc">
+              Belajar tidak harus membosankan. Selesaikan tantangan dan kumpulkan poin
+              melalui game matematika kami.
+            </p>
+          </article>
+          <article class="glass-card bento-card" id="bento-kuis">
+            <h3 class="bento-card__title">Kuis Cerdas</h3>
+            <p class="bento-card__desc">
+              Uji pemahaman Anda dengan kuis adaptif yang menyesuaikan tingkat kesulitan
+              berdasarkan progres Anda.
+            </p>
+          </article>
+          <article class="glass-card bento-card bento-card--wide" id="bento-komunitas">
+            <div>
+              <h3 class="bento-card__title">Tentang Kami</h3>
+              <p class="bento-card__desc">
+                Kami adalah tim yang bersemangat untuk memecahkan kompleksitas matematika
+                menjadi sesuatu yang mudah dipahami dan menyenangkan.
+              </p>
+            </div>
+            <div class="bento-card__footer">
+              <a href="tim.html" class="bento-card__link" id="bento-link-materi">
+                Tim Kami
+                <span class="svg-icon" style="-webkit-mask-image: url('./src/Assets/icons/arrow_outward.svg'); mask-image: url('./src/Assets/icons/arrow_outward.svg'); font-size:16px;" aria-hidden="true"></span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-root"></div>
+  <script type="module" src="src/pages/beranda.js"></script>
+</body>
+
+</html>

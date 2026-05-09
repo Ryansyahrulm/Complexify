@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Complexify — Tebak Koordinat</title>
+  <meta name="description"
+    content="Game interaktif bilangan kompleks: selesaikan operasi aljabar lalu tebak koordinatnya di diagram Argand!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  <link rel="stylesheet" href="./src/styles/navbar.css" />
+  <link rel="stylesheet" href="./src/styles/footer.css" />
+  <link rel="stylesheet" href="./src/styles/pages/game.css" />
+
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      chtml: {
+        matchFontHeight: true
+      },
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <div id="navbar-root"></div>
+
+  <main class="game-main page-main" id="main-content">
+    <div class="game-layout">
+      <aside class="game-sidebar">
+        <div class="game-panel question-panel"> 
+          <div class="target-box">
+            <div class="target-box__expr" id="question-expr">Memuat soal...</div>
+          </div>
+
+          <button class="btn-new-question" id="new-question-btn" aria-label="Generate soal baru" type="reset">
+            <span class="svg-icon" aria-hidden="true" style="-webkit-mask-image: url('./src/Assets/icons/refresh.svg'); mask-image: url('./src/Assets/icons/refresh.svg');"></span>
+            Soal Baru
+          </button>
+        </div>
+        <div class="game-panel instructions-panel">
+          <h2 class="instructions-panel__title">Instruksi</h2>
+          <ol class="instructions-list">
+            <li>
+              <span class="num">1.</span>
+              <span>Perhatikan operasi bilangan kompleks yang diberikan dan hitung hasilnya secara mental.</span>
+            </li>
+            <li>
+              <span class="num">2.</span>
+              <span>Klik pada Diagram Argand untuk menandai koordinat dari hasil operasi tersebut.</span>
+            </li>
+            <li>
+              <span class="num">3.</span>
+              <span>Semakin dekat klik Anda dengan target, semakin tinggi skor yang Anda dapatkan!</span>
+            </li>
+          </ol>
+        </div>
+
+      </aside>
+      <div class="canvas-area">
+        <div class="canvas-wrapper" id="canvas-wrapper">
+          <canvas id="game-canvas" aria-label="diagram Argand — klik untuk menebak koordinat"></canvas>
+        </div>
+      </div><!-- /canvas-area -->
+
+    </div><!-- /game-layout -->
+  </main>
+  <div id="footer-root"></div>
+  <script type="module" src="./src/pages/game.js"></script>
+
+</body>
+
+</html>

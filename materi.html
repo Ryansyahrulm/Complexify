@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Complexify — Materi Bilangan Kompleks</title>
+  <meta name="description"
+    content="Pelajari bilangan kompleks secara mendalam: dari definisi dasar, Bidang Argand, hingga operasi aljabar, dengan panduan visual interaktif." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload Fonts -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles/main.css" />
+  <link rel="stylesheet" href="./src/styles/navbar.css" />
+  <link rel="stylesheet" href="./src/styles/footer.css" />
+  <link rel="stylesheet" href="./src/styles/pages/materi.css" />
+
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      chtml: {
+        matchFontHeight: true
+      },
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <div id="navbar-root"></div>
+  <main class="materi-main page-main" id="main-content">
+    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Toggle sidebar">
+      <span class="svg-icon"
+        style="-webkit-mask-image: url('./src/Assets/icons/chevron_right.svg'); mask-image: url('./src/Assets/icons/chevron_right.svg');"></span>
+    </button>
+    <aside id="materi-sidebar" class="materi-sidebar">
+      <div class="glass-card materi-sidebar__card">
+        <nav id="sidebar-nav" class="sidebar-nav" aria-label="Topik materi">
+          <div class="sidebar-item-group" data-parent="prasyarat">
+            <button data-topic="prasyarat" class="topic-btn" aria-expanded="false">
+              <div class="topic-btn__inner">
+                <span>Pengantar</span>
+              </div>
+              <span class="svg-icon dropdown-arrow" aria-hidden="true"
+                style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
+            </button>
+            <div class="dropdown-content open">
+              <button data-target="konsep-dasar" class="subtopic-btn">Konsep Dasar i</button>
+              <button data-target="menyederhanakan" class="subtopic-btn">Menyederhanakan Akar Negatif</button>
+            </div>
+          </div>
+          <div class="sidebar-item-group" data-parent="definisi">
+            <button data-topic="definisi" class="topic-btn" aria-expanded="false">
+              <div class="topic-btn__inner">
+                <span>Definisi</span>
+              </div>
+              <span class="svg-icon dropdown-arrow" aria-hidden="true"
+                style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
+            </button>
+            <div class="dropdown-content open">
+              <button data-target="bentuk-standar" class="subtopic-btn">Bentuk Standar</button>
+            </div>
+          </div>
+          <div class="sidebar-item-group" data-parent="diagram_argand">
+            <button data-topic="diagram_argand" class="topic-btn" aria-expanded="false">
+              <div class="topic-btn__inner">
+                <span>Diagram Argand</span>
+              </div>
+              <span class="svg-icon dropdown-arrow" aria-hidden="true"
+                style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
+            </button>
+            <div class="dropdown-content open">
+              <button data-target="representasi-geometris" class="subtopic-btn">Representasi Geometris</button>
+            </div>
+          </div>
+          <div class="sidebar-item-group" data-parent="operasi_dasar">
+            <button data-topic="operasi_dasar" class="topic-btn" aria-expanded="false">
+              <div class="topic-btn__inner">
+                <span>Operasi Dasar</span>
+              </div>
+              <span class="svg-icon dropdown-arrow" aria-hidden="true"
+                style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
+            </button>
+            <div class="dropdown-content open">
+              <button data-target="penjumlahan-pengurangan" class="subtopic-btn">Penjumlahan &amp; Pengurangan</button>
+              <button data-target="perkalian" class="subtopic-btn">Perkalian</button>
+            </div>
+          </div>
+          <div class="sidebar-item-group" data-parent="contoh_soal">
+            <button data-topic="contoh_soal" class="topic-btn" aria-expanded="false">
+              <div class="topic-btn__inner">
+                <span>Contoh Soal</span>
+              </div>
+              <span class="svg-icon dropdown-arrow" aria-hidden="true"
+                style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
+            </button>
+            <div class="dropdown-content open">
+              <button data-target="soal-1" class="subtopic-btn">Soal 1</button>
+              <button data-target="soal-2" class="subtopic-btn">Soal 2</button>
+            </div>
+          </div>
+
+        </nav>
+      </div>
+    </aside>
+    <section class="materi-content" aria-live="polite">
+      <div class="glass-card materi-content__card">
+        <div id="content-area" class="space-y-12"></div>
+        <div class="materi-nav">
+          <div id="prev-btn-container"></div>
+          <div id="next-btn-container"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div id="footer-root"></div>
+  <script type="module" src="./src/pages/materi.js"></script>
+</body>
+
+</html>

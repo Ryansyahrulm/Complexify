@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Complexify — Kuis Bilangan Kompleks</title>
+  <meta name="description"
+    content="Uji pemahaman Anda tentang bilangan kompleks melalui kuis interaktif Complexify dengan 10 soal acak." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload Fonts -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles/main.css" />
+  <link rel="stylesheet" href="./src/styles/navbar.css" />
+  <link rel="stylesheet" href="./src/styles/footer.css" />
+  <link rel="stylesheet" href="./src/styles/pages/kuis.css" />
+
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      chtml: {
+        matchFontHeight: true
+      },
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <div id="navbar-root"></div>
+  <main class="kuis-main page-main" id="main-content">
+    <div id="quiz-loading" class="kuis-loading">
+      <div class="kuis-spinner" aria-hidden="true"></div>
+      <p class="text-muted">Menyiapkan kuis...</p>
+    </div>
+    <div id="quiz-container" class="quiz-container hidden">
+      <div class="glass-card quiz-card" id="quiz-card">
+        <div class="quiz-card__glow" aria-hidden="true"></div>
+
+        <div class="quiz-card__body">
+          <div id="question-number-text" class="quiz-card__number">Soal 1/10</div>
+          <p id="question-text" class="quiz-question-text"></p>
+          <div id="options-grid" class="quiz-options-grid">
+          </div>
+          <div class="quiz-nav">
+            <button id="next-btn" class="quiz-nav__next" aria-label="Pertanyaan berikutnya">
+              <span id="next-btn-text" class="next">Berikutnya</span>
+              <span class="svg-icon next" aria-hidden="true"
+                style="-webkit-mask-image: url('./src/Assets/icons/arrow_forward.svg'); mask-image: url('./src/Assets/icons/arrow_forward.svg');"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- result container -->
+    <div id="results-container" class="results-container hidden">
+      <div class="results-glass-card results-card">
+        <div class="results-card__glow" aria-hidden="true"></div>
+        <div class="results-header">
+          <div class="results-stat">
+            <div class="results-stat__label">Jawaban benar: <span><span class="correct"
+                  id="correct-text">0</span>/10</span></div>
+            <div class="results-stat__label">Jawaban salah: <span><span class="wrong" id="wrong-text">0</span>/10</span>
+            </div>
+            <div class="results-stat__label">Skor: <span id="score-text">0</span></div>
+          </div>
+          <button onclick="window.location.reload()" class="results-btn-primary">
+            Ulangi Kuis
+          </button>
+        </div>
+      </div>
+      <section class="results-review" id="results-review" aria-label="Pembahasan jawaban">
+        <div class="results-review__list" id="results-review-list">
+
+        </div>
+      </section>
+    </div>
+    </div><!-- /results-container -->
+
+  </main>
+  <div id="footer-root"></div>
+  <script type="module" src="./src/pages/kuis.js"></script>
+
+</body>
+
+</html>

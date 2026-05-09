@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Complexify — Tim Kami</title>
+  <meta name="description"
+    content="Kenali tim di balik Complexify — kolektif matematikawan, developer, dan desainer yang mendedikasikan diri untuk mendemistifikasi bilangan kompleks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Preload Fonts -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  <link rel="stylesheet" href="./src/styles/navbar.css" />
+  <link rel="stylesheet" href="./src/styles/footer.css" />
+  <link rel="stylesheet" href="./src/styles/pages/tim.css" />
+
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      chtml: {
+        matchFontHeight: true
+      },
+      tex: {
+        inlineMath: [['\\(', '\\)']],
+        displayMath: [['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+  <div id="navbar-root"></div>
+
+  <main class="team-main page-main" id="main-content">
+    <section class="team-grid" id="team-grid" aria-label="Anggota Tim">
+
+    </section>
+  </main>
+  <div id="footer-root"></div>
+  <script type="module" src="./src/pages/tim.js"></script>
+
+</body>
+
+</html>
