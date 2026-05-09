@@ -8,24 +8,28 @@ let questions = [];
 let currentQuestionIndex = 0;
 let userAnswers = new Array(10).fill(null);
 
-const DOM = {
-    loading: document.getElementById('quiz-loading'),
-    container: document.getElementById('quiz-container'),
-    results: document.getElementById('results-container'),
-    sidebar: document.getElementById('sidebar-container'),
+let DOM = {};
 
-    questionNumber: document.getElementById('question-number-text'),
-    questionText: document.getElementById('question-text'),
-    optionsGrid: document.getElementById('options-grid'),
-    nextBtn: document.getElementById('next-btn'),
-    nextBtnText: document.getElementById('next-btn-text'),
+function initDOM() {
+    DOM = {
+        loading: document.getElementById('quiz-loading'),
+        container: document.getElementById('quiz-container'),
+        results: document.getElementById('results-container'),
+        sidebar: document.getElementById('sidebar-container'),
 
-    scoreText: document.getElementById('score-text'),
-    correctText: document.getElementById('correct-text'),
-    wrongText: document.getElementById('wrong-text'),
+        questionNumber: document.getElementById('question-number-text'),
+        questionText: document.getElementById('question-text'),
+        optionsGrid: document.getElementById('options-grid'),
+        nextBtn: document.getElementById('next-btn'),
+        nextBtnText: document.getElementById('next-btn-text'),
 
-    reviewList: document.getElementById('results-review-list')
-};
+        scoreText: document.getElementById('score-text'),
+        correctText: document.getElementById('correct-text'),
+        wrongText: document.getElementById('wrong-text'),
+
+        reviewList: document.getElementById('results-review-list')
+    };
+}
 
 function escapeHtml(str) {
     if (!str) return '';
@@ -48,6 +52,7 @@ function shuffle(array) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    initDOM();
     try {
         const response = await fetch('./src/data/kuis.json');
         const allQuestions = await response.json();
@@ -109,8 +114,12 @@ function showAlert(message, type = 'warning') {
         <button class="quiz-alert__close">&times;</button>
     `;
 
-    const quizCard = document.querySelector('.quiz-card');
-    quizCard.parentNode.insertBefore(alert, quizCard);
+    const quizCard = document.querySelector('.quiz-card') || DOM.container;
+    if (quizCard && quizCard.parentNode) {
+        quizCard.parentNode.insertBefore(alert, quizCard);
+    } else {
+        document.body.appendChild(alert);
+    }
 
     setTimeout(() => {
         alert.classList.add('quiz-alert--show');
@@ -193,16 +202,20 @@ function renderQuestion() {
         DOM.nextBtnText.textContent = "Selesai";
         DOM.nextBtn.classList.add('quiz-nav__next--submit');
         const icon = DOM.nextBtn.querySelector('.svg-icon');
-        if (icon) icon.style.webkitMaskImage = "url('./src/Assets/icons/task_alt.svg')";
-        icon.style.maskImage = "url('./src/Assets/icons/task_alt.svg')";
-        icon.textContent = "";
+        if (icon) {
+            icon.style.webkitMaskImage = "url('./src/Assets/icons/task_alt.svg')";
+            icon.style.maskImage = "url('./src/Assets/icons/task_alt.svg')";
+            icon.textContent = "";
+        }
     } else {
         DOM.nextBtnText.textContent = "Berikutnya";
         DOM.nextBtn.classList.remove('quiz-nav__next--submit');
         const icon = DOM.nextBtn.querySelector('.svg-icon');
-        if (icon) icon.style.webkitMaskImage = "url('./src/Assets/icons/arrow_forward.svg')";
-        icon.style.maskImage = "url('./src/Assets/icons/arrow_forward.svg')";
-        icon.textContent = "";
+        if (icon) {
+            icon.style.webkitMaskImage = "url('./src/Assets/icons/arrow_forward.svg')";
+            icon.style.maskImage = "url('./src/Assets/icons/arrow_forward.svg')";
+            icon.textContent = "";
+        }
     }
 
     if (window.MathJax) {

@@ -34,7 +34,7 @@ if (teamContainer) {
         <div class="team-card__avatar-wrap">
           <div class="team-card__glow" aria-hidden="true"></div>
           <div class="team-card__avatar">
-            <img src="./src/Assets/images/${member.photo}" alt="${member.name}" loading="lazy" width="160" height="160" />
+            <img src="./src/Assets/images/${member.photo}" alt="${member.name}" loading="lazy" width="160" height="160" oncontextmenu="return false;"/>
           </div>
         </div>
         <h2 class="team-card__name">${member.name}</h2>
