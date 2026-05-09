@@ -1,6 +1,6 @@
 import { initNavbar } from '../components/navbar.js';
 import { initFooter } from '../components/footer.js';
-initNavbar({ activePage: 'team' });
+initNavbar({ activePage: 'tim' });
 initFooter();
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -15,13 +15,13 @@ const revealObserver = new IntersectionObserver(
 );
 
 const teamMembers = [
-  { name: 'Wijdan Maula Hidayat', role: 'Frontend Developer', photo: '#' },
-  { name: 'Ryan Syahrul Muharam', role: 'Backend Engineer', photo: '#' },
-  { name: 'Fahmi Miftahudin', role: 'Fullstack Dev', photo: '#' },
-  { name: 'Muhammad Rizki Fadlillah', role: 'UI/UX Designer', photo: '#' },
-  { name: 'Muhammad Syakirul Yaqzhan', role: 'DevOps', photo: '#' },
-  { name: 'Wahyu Aldhy Rachmansyah', role: 'QA Engineer', photo: '#' },
-  { name: 'Alfidi Rahadianto', role: 'Project Manager', photo: '#' }
+  { name: 'Wijdan Maula Hidayat', role: 'Presiden', photo: '#' },
+  { name: 'Ryan Syahrul Muharam', role: 'Presiden', photo: '#' },
+  { name: 'Fahmi Miftahudin', role: 'Presiden', photo: '#' },
+  { name: 'Muhammad Rizki Fadlillah', role: 'Presiden', photo: '#' },
+  { name: 'Muhammad Syakirul Yaqzhan', role: 'Presiden', photo: '#' },
+  { name: 'Wahyu Aldhy Rachmansyah', role: 'Presiden', photo: '#' },
+  { name: 'Alfidi Rahadianto', role: 'Presiden', photo: '#' }
 ];
 
 const teamContainer = document.getElementById('team-grid');
