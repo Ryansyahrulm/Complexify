@@ -1,22 +1,29 @@
-<header>
-    <h1 class="font-h1 text-on-surface mb-4">Operasi Dasar</h1>
-    <p class="text-body-lg text-on-surface-variant max-w-3xl">
-        Seperti bilangan riil, bilangan kompleks juga dapat dijumlahkan, dikurangkan, dikalikan, dan dibagi.
+<header class="topic-header">
+    <h1 class="text-h1 topic-title">Operasi Dasar</h1>
+    <p class="topic-description">
+        Seperti bilangan riil, bilangan kompleks juga dapat dijumlahkan, dikurangkan, dan dikalikan.
     </p>
 </header>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-    <div class="p-6 bg-slate-900/40 rounded-xl border border-white/5 space-y-4">
-        <h3 id="penjumlahan-pengurangan" class="font-h3 text-indigo-300">Penjumlahan & Pengurangan</h3>
-        <p class="text-slate-400 text-sm">Tambahkan/kurangkan bagian riil dengan riil, dan imajiner dengan imajiner.</p>
-        <div class="font-mono text-cyan-400 bg-slate-950 p-4 rounded-lg">
-            (a+bi) ± (c+di) =<br>(a±c) + (b±d)i
+<div class="topic-grid topic-grid--2 topic-section">
+    <div class="example-card">
+        <h3 id="penjumlahan">Penjumlahan</h3>
+        <p class="text-muted">Tambahkan bagian riil dengan riil, dan imajiner dengan imajiner.</p>
+        <div class="soal-answer-box" style="color: #5de6ff;">
+            \( =(a+bi) + (c+di) \) <br>\( =(a+c) + (b+d)i \)
         </div>
     </div>
-    <div class="p-6 bg-slate-900/40 rounded-xl border border-white/5 space-y-4">
-        <h3 id="perkalian" class="font-h3 text-indigo-300">Perkalian</h3>
-        <p class="text-slate-400 text-sm">Gunakan sifat distributif (FOIL) dan ingat bahwa \( i^2 \) = -1.</p>
-        <div class="font-mono text-cyan-400 bg-slate-950 p-4 rounded-lg">
-            (a+bi)(c+di) =<br>(ac-bd) + (ad+bc)i
+    <div class="example-card">
+        <h3 id="pengurangan">Pengurangan</h3>
+        <p class="text-muted">Kurangkan bagian riil dengan riil, dan imajiner dengan imajiner.</p>
+        <div class="soal-answer-box" style="color: #5de6ff;">
+            \( =(a+bi) - (c+di) \) <br>\( =(a-c) + (b-d)i \)
+        </div>
+    </div>
+    <div class="example-card">
+        <h3 id="perkalian">Perkalian</h3>
+        <p class="text-muted">Gunakan sifat distributif (FOIL) dan ingat bahwa \( i^2 = -1 \).</p>
+        <div class="soal-answer-box" style="color: #5de6ff;">
+            \( =(a+bi)(c+di) \) <br>\( =(ac-bd) + (ad+bc)i \)
         </div>
     </div>
 </div>

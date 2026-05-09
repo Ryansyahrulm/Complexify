@@ -29,7 +29,7 @@ const DOM = {
 
 function escapeHtml(str) {
     if (!str) return '';
-    return str.replace(/[&<>]/g, function(m) {
+    return str.replace(/[&<>]/g, function (m) {
         if (m === '&') return '&amp;';
         if (m === '<') return '&lt;';
         if (m === '>') return '&gt;';
@@ -177,8 +177,8 @@ function renderQuestion() {
 
         if (isSelected) {
             const checkIcon = document.createElement('span');
-            checkIcon.className = 'svg-icon option-check';
-            checkIcon.textContent = 'check_circle';
+            checkIcon.className = 'option-check';
+            checkIcon.textContent = '✓';
             btn.appendChild(checkIcon);
         }
 
@@ -230,7 +230,7 @@ function renderReview() {
         card.innerHTML = `
             <div class="results-card__glow" aria-hidden="true"></div>
             <div class="results-card__body">
-                <p class="results-question-text">${i+1}. ${escapeHtml(q.question)}</p>
+                <p class="results-question-text">${i + 1}. ${escapeHtml(q.question)}</p>
                 <div class="results-options-grid"></div>
                 <div class="results-explanation">Penjelasan:</div>
                 <div class="results-explanation">${escapeHtml(q.explanation || 'Tidak ada penjelasan untuk soal ini.')}</div>

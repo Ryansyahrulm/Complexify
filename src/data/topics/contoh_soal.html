@@ -1,38 +1,44 @@
-<header>
-    <h1 class="font-h1 text-on-surface mb-4">Contoh Soal Latihan</h1>
-    <p class="text-body-lg text-on-surface-variant max-w-3xl">
+<header class="topic-header">
+    <h1 class="text-h1 topic-title">Contoh Soal Latihan</h1>
+    <p class="topic-description">
         Mari kita uji pemahaman dengan beberapa contoh soal sederhana.
     </p>
 </header>
-<div class="space-y-6">
-    <div class="p-6 bg-slate-900/40 rounded-xl border border-white/5">
-        <div id="soal-1" class="flex justify-between items-start mb-4 pt-4">
-            <h3 class="text-lg font-semibold text-white">Soal 1</h3>
-            <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-bold">Penjumlahan</span>
+<div class="topic-section">
+    <div class="soal-card">
+        <div id="soal-1" class="soal-header">
+            <h3 class="text-h3" style="color: #fff;">Soal 1</h3>
+            <span class="soal-tag">Penjumlahan</span>
         </div>
-        <p class="text-slate-300 mb-4">Hitunglah: \( (3 + 4i) + (2 - i) \)</p>
-        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="text-sm text-cyan-400 hover:text-cyan-300 font-semibold mb-2 transition-colors">Tampilkan Jawaban</button>
-        <div class="hidden p-4 bg-slate-950 rounded-lg border border-indigo-500/30 mt-2">
-            <div class="font-mono text-slate-300">
+        <p class="soal-text">Hitunglah: \( (3 + 4i) + (2 - i) \)</p>
+        <button class="materi-nav__prev" style="color: var(--color-secondary); margin-bottom: 12px; font-size: 14px;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'">
+            <span>Lihat Jawaban</span>
+        </button>
+        <div class="soal-answer-box" style="display: none;">
+            <div>
+                \( = (3 + 4i) + (2 - i) \)<br>
                 \( = (3 + 2) + (4 - 1)i \)<br>
-                <span class="text-cyan-400 font-bold">\( = 5 + 3i \)</span>
+                <span class="text-highlight">\( = 5 + 3i \)</span>
             </div>
         </div>
     </div>
-    <div class="p-6 bg-slate-900/40 rounded-xl border border-white/5">
-        <div id="soal-2" class="flex justify-between items-start mb-4 pt-4">
-            <h3 class="text-lg font-semibold text-white">Soal 2</h3>
-            <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-bold">Perkalian</span>
+    <div class="soal-card">
+        <div id="soal-2" class="soal-header">
+            <h3 class="text-h3" style="color: #fff;">Soal 2</h3>
+            <span class="soal-tag">Perkalian</span>
         </div>
-        <p class="text-slate-300 mb-4">Hitunglah: \( (2 + i) \times (1 - 3i) \)</p>
-        <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="text-sm text-cyan-400 hover:text-cyan-300 font-semibold mb-2 transition-colors">Tampilkan Jawaban</button>
-        <div class="hidden p-4 bg-slate-950 rounded-lg border border-indigo-500/30 mt-2">
-            <div class="font-mono text-slate-300">
+        <p class="soal-text">Hitunglah: \( (2 + i) \times (1 - 3i) \)</p>
+        <button class="materi-nav__prev" style="color: var(--color-secondary); margin-bottom: 12px; font-size: 14px;" onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'">
+            <span>Lihat Jawaban</span>
+        </button>
+        <div class="soal-answer-box" style="display: none;">
+            <div>
+                \( = (2 + i) \times (1 - 3i) \)<br>
                 \( = 2(1) + 2(-3i) + i(1) + i(-3i) \)<br>
                 \( = 2 - 6i + i - 3i^2 \)<br>
                 \( = 2 - 5i - 3(-1) \)<br>
                 \( = 2 + 3 - 5i \)<br>
-                <span class="text-cyan-400 font-bold">\( = 5 - 5i \)</span>
+                <span class="text-highlight">\( = 5 - 5i \)</span>
             </div>
         </div>
     </div>

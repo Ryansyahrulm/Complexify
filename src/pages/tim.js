@@ -15,12 +15,12 @@ const revealObserver = new IntersectionObserver(
 );
 
 const teamMembers = [
-  { name: 'Wijdan Maula Hidayat', role: 'Presiden', photo: '#' },
-  { name: 'Ryan Syahrul Muharam', role: 'Presiden', photo: '#' },
-  { name: 'Fahmi Miftahudin', role: 'Presiden', photo: '#' },
-  { name: 'Muhammad Rizki Fadlillah', role: 'Presiden', photo: '#' },
+  { name: 'Wijdan Maula Hidayat', role: 'Presiden', photo: 'wijdan.jpeg' },
+  { name: 'Ryan Syahrul Muharam', role: 'Presiden', photo: 'ryan.jpeg' },
+  { name: 'Fahmi Miftahudin', role: 'Presiden', photo: 'fahmi.jpeg' },
+  { name: 'Muhammad Rizki Fadlillah', role: 'Presiden', photo: 'rizki.jpeg' },
   { name: 'Muhammad Syakirul Yaqzhan', role: 'Presiden', photo: '#' },
-  { name: 'Wahyu Aldhy Rachmansyah', role: 'Presiden', photo: '#' },
+  { name: 'Wahyu Aldhy Rachmansyah', role: 'Presiden', photo: 'wahyu.jpeg' },
   { name: 'Alfidi Rahadianto', role: 'Presiden', photo: '#' }
 ];
 
@@ -30,11 +30,11 @@ if (teamContainer) {
 
   teamMembers.forEach((member, index) => {
     teamContainer.innerHTML += `
-      <article class="glass-card team-card reveal" id="tim-alif">
+      <article class="glass-card team-card reveal">
         <div class="team-card__avatar-wrap">
           <div class="team-card__glow" aria-hidden="true"></div>
           <div class="team-card__avatar">
-            <img src="${member.photo}" alt="${member.name}" loading="lazy" width="160" height="160" />
+            <img src="./src/Assets/images/${member.photo}" alt="${member.name}" loading="lazy" width="160" height="160" />
           </div>
         </div>
         <h2 class="team-card__name">${member.name}</h2>

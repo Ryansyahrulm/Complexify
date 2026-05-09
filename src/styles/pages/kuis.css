@@ -10,6 +10,7 @@
   min-height: 100vh;
   position: relative;
 }
+
 .kuis-loading {
   width: 100%;
   text-align: center;
@@ -32,7 +33,14 @@
     transform: rotate(360deg);
   }
 }
+
 .quiz-alert {
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  z-index: 9999;
+  width: 90%;
+  max-width: 480px;
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.95), rgba(217, 119, 6, 0.95));
   backdrop-filter: blur(10px);
   border-radius: 16px;
@@ -41,7 +49,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  transform: translateY(-20px);
+  transform: translate(-50%, -20px);
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1);
@@ -49,7 +57,7 @@
 }
 
 .quiz-alert--show {
-  transform: translateY(0);
+  transform: translate(-50%, 0);
   opacity: 1;
 }
 
@@ -103,6 +111,7 @@
 .quiz-alert__close:active {
   transform: scale(0.95);
 }
+
 @keyframes shake {
 
   0%,
@@ -122,6 +131,7 @@
 .shake {
   animation: shake 0.3s ease-in-out;
 }
+
 .quiz-container {
   width: 100%;
   display: flex;
@@ -135,6 +145,7 @@
 .results-container.hidden {
   display: none;
 }
+
 .quiz-card {
   padding: 32px;
   top: -48px;
@@ -177,12 +188,16 @@
     font-size: 1.5rem;
   }
 }
+
 .quiz-options-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
-.option-btn,  .option-btn--correct, .option-btn--wrong{
+
+.option-btn,
+.option-btn--correct,
+.option-btn--wrong {
   display: flex;
   align-items: center;
   padding: 20px;
@@ -214,10 +229,12 @@
 .option-btn:disabled {
   cursor: default;
 }
+
 .option-btn--selected {
   border-color: var(--color-primary);
   background: rgba(195, 192, 255, 0.1);
 }
+
 .option-btn--dimmed {
   opacity: 0.5;
   border-color: rgba(255, 255, 255, 0.05);
@@ -262,6 +279,7 @@
   color: var(--color-primary);
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
 .quiz-nav {
   margin-top: 32px;
   display: flex;
@@ -339,6 +357,7 @@
 .quiz-nav__next:hover .svg-icon {
   transform: translateX(4px);
 }
+
 .results-container {
   width: 100%;
 }
@@ -357,11 +376,11 @@
 }
 
 .results-card--correct {
-    background: rgba(23, 100, 28, 0.6);
+  background: rgba(23, 100, 28, 0.6);
 }
 
 .results-card--wrong {
-    background: rgba(100, 23, 23, 0.6);
+  background: rgba(100, 23, 23, 0.6);
 }
 
 .results-card__glow {
@@ -400,13 +419,15 @@
     font-size: 16px;
   }
 }
+
 .results-options-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
   margin-bottom: 16px;
 }
-.results-option-btn{
+
+.results-option-btn {
   display: flex;
   align-items: center;
   padding: 16px;
@@ -489,7 +510,7 @@
 }
 
 .results-review__list {
-  margin-top: 12px  ;
+  margin-top: 12px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 12px;

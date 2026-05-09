@@ -5,7 +5,7 @@ initNavbar({ activePage: 'materi' });
 initFooter();
 
 let topicsContent = {};
-const topicOrder = ['prasyarat', 'definisi', 'diagram_argand', 'operasi_dasar', 'contoh_soal'];
+const topicOrder = ['pendahuluan', 'prasyarat', 'definisi', 'pangkat_j', 'operasi_dasar', 'diagram_argand', 'bentuk_kutub', 'contoh_soal'];
 let currentTopicIndex = 0;
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -50,19 +50,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     function updateContent(topicId, scrollToId = null) {
         currentTopicIndex = topicOrder.indexOf(topicId);
 
-        sidebarButtons.forEach(btn => {
-            const group = btn.closest('.sidebar-item-group');
-            const dropdown = group.querySelector('.dropdown-content');
-            const arrow = group.querySelector('.dropdown-arrow');
-
+        const subtopicButtons = document.querySelectorAll('.subtopic-btn');
+        subtopicButtons.forEach(btn => {
             if (btn.dataset.topic === topicId) {
-                btn.classList.add('topic-btn--active');
-                if (dropdown) dropdown.classList.add('open');
-                if (arrow) arrow.style.transform = 'rotate(180deg)';
+                btn.classList.add('active');
+                btn.style.color = '#fff';
+                btn.style.fontWeight = '600';
             } else {
-                btn.classList.remove('topic-btn--active');
-                if (dropdown) dropdown.classList.remove('open');
-                if (arrow) arrow.style.transform = '';
+                btn.classList.remove('active');
+                btn.style.color = '';
+                btn.style.fontWeight = '';
             }
         });
 
@@ -75,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 contentArea.classList.remove('fade-out');
 
                 updateNavButtons();
-                
+
                 if (window.MathJax) {
                     MathJax.typesetPromise();
                 }
@@ -136,19 +133,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         updateContent(topicId);
     };
 
-    sidebarButtons.forEach(btn => {
+    const groupButtons = document.querySelectorAll('.topic-group-btn');
+    groupButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            const clickedTopic = btn.dataset.topic;
-            if (contentArea.dataset.currentTopic === clickedTopic) {
-                const group = btn.closest('.sidebar-item-group');
-                const dropdown = group.querySelector('.dropdown-content');
-                const arrow = group.querySelector('.dropdown-arrow');
-                if (dropdown) {
-                    const isOpen = dropdown.classList.toggle('open');
-                    if (arrow) arrow.style.transform = isOpen ? 'rotate(180deg)' : '';
-                }
-            } else {
-                updateContent(clickedTopic);
+            const group = btn.closest('.sidebar-item-group');
+            const dropdown = group.querySelector('.dropdown-content');
+            if (dropdown) {
+                const isOpen = dropdown.classList.toggle('open');
+                btn.classList.toggle('open', isOpen);
+                btn.setAttribute('aria-expanded', isOpen);
             }
         });
     });
@@ -157,10 +150,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     subtopicButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            const group = btn.closest('.sidebar-item-group');
-            const parentTopic = group.dataset.parent;
-            const targetId = btn.dataset.target;
-            updateContent(parentTopic, targetId);
+            const clickedTopic = btn.dataset.topic;
+            if (contentArea.dataset.currentTopic !== clickedTopic) {
+                updateContent(clickedTopic);
+            }
         });
     });
 

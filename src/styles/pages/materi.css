@@ -88,7 +88,7 @@
 
 @media screen and (min-width: 768px) {
   .materi-sidebar__card {
-    width: 216px;
+    width: 240px;
   }
 }
 
@@ -138,10 +138,6 @@
 .dropdown-content {
   display: none;
   flex-direction: column;
-  gap: 4px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-block: 8px;
   border-left: 1px solid rgba(148, 163, 184, 0.3);
   margin-left: 24px;
 }
@@ -157,10 +153,15 @@
   background: transparent;
   border: none;
   font-family: var(--font-family-base);
-  padding-block: 4px;
+  padding: 4px 16px;
   cursor: pointer;
   transition: color var(--transition-fast);
   width: 100%;
+}
+
+.subtopic-btn.active {
+  border-left: 2px solid var(--color-primary);
+  margin-left: -2px;
 }
 
 .subtopic-btn:hover {
@@ -199,6 +200,23 @@
 #content-area.fade-out {
   opacity: 0;
   transform: translateY(10px);
+}
+
+.content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.topic-header, .topic-section, .topic-description {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topic-section ul {
+  list-style: disc;
+  padding-left: 20px;
 }
 
 .materi-nav {

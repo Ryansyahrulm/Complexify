@@ -44,67 +44,56 @@
     <aside id="materi-sidebar" class="materi-sidebar">
       <div class="glass-card materi-sidebar__card">
         <nav id="sidebar-nav" class="sidebar-nav" aria-label="Topik materi">
-          <div class="sidebar-item-group" data-parent="prasyarat">
-            <button data-topic="prasyarat" class="topic-btn" aria-expanded="false">
+          <div class="sidebar-item-group">
+            <button class="topic-btn topic-group-btn open" aria-expanded="true">
               <div class="topic-btn__inner">
-                <span>Pengantar</span>
+                <span style="font-weight: bold; color: #fff;">Pengantar</span>
               </div>
               <span class="svg-icon dropdown-arrow" aria-hidden="true"
                 style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
             </button>
             <div class="dropdown-content open">
-              <button data-target="konsep-dasar" class="subtopic-btn">Konsep Dasar i</button>
-              <button data-target="menyederhanakan" class="subtopic-btn">Menyederhanakan Akar Negatif</button>
+              <button data-topic="pendahuluan" class="subtopic-btn">Pendahuluan</button>
+              <button data-topic="prasyarat" class="subtopic-btn">Prasyarat</button>
             </div>
           </div>
-          <div class="sidebar-item-group" data-parent="definisi">
-            <button data-topic="definisi" class="topic-btn" aria-expanded="false">
+          <div class="sidebar-item-group">
+            <button class="topic-btn topic-group-btn" aria-expanded="false">
               <div class="topic-btn__inner">
-                <span>Definisi</span>
+                <span style="font-weight: bold; color: #fff;">Bilangan Kompleks</span>
               </div>
               <span class="svg-icon dropdown-arrow" aria-hidden="true"
                 style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
             </button>
-            <div class="dropdown-content open">
-              <button data-target="bentuk-standar" class="subtopic-btn">Bentuk Standar</button>
+            <div class="dropdown-content">
+              <button data-topic="definisi" class="subtopic-btn">Definisi</button>
+              <button data-topic="pangkat_j" class="subtopic-btn">Pangkat \( i \)</button>
+              <button data-topic="operasi_dasar" class="subtopic-btn">Operasi Dasar</button>
             </div>
           </div>
-          <div class="sidebar-item-group" data-parent="diagram_argand">
-            <button data-topic="diagram_argand" class="topic-btn" aria-expanded="false">
+          <div class="sidebar-item-group">
+            <button class="topic-btn topic-group-btn" aria-expanded="false">
               <div class="topic-btn__inner">
-                <span>Diagram Argand</span>
+                <span style="font-weight: bold; color: #fff;">Lanjutan</span>
               </div>
               <span class="svg-icon dropdown-arrow" aria-hidden="true"
                 style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
             </button>
-            <div class="dropdown-content open">
-              <button data-target="representasi-geometris" class="subtopic-btn">Representasi Geometris</button>
+            <div class="dropdown-content">
+              <button data-topic="diagram_argand" class="subtopic-btn">Diagram Argand</button>
+              <button data-topic="bentuk_kutub" class="subtopic-btn">Bentuk Kutub</button>
             </div>
           </div>
-          <div class="sidebar-item-group" data-parent="operasi_dasar">
-            <button data-topic="operasi_dasar" class="topic-btn" aria-expanded="false">
+          <div class="sidebar-item-group">
+            <button class="topic-btn topic-group-btn" aria-expanded="false">
               <div class="topic-btn__inner">
-                <span>Operasi Dasar</span>
+                <span style="font-weight: bold; color: #fff;">Contoh Soal</span>
               </div>
               <span class="svg-icon dropdown-arrow" aria-hidden="true"
                 style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
             </button>
-            <div class="dropdown-content open">
-              <button data-target="penjumlahan-pengurangan" class="subtopic-btn">Penjumlahan &amp; Pengurangan</button>
-              <button data-target="perkalian" class="subtopic-btn">Perkalian</button>
-            </div>
-          </div>
-          <div class="sidebar-item-group" data-parent="contoh_soal">
-            <button data-topic="contoh_soal" class="topic-btn" aria-expanded="false">
-              <div class="topic-btn__inner">
-                <span>Contoh Soal</span>
-              </div>
-              <span class="svg-icon dropdown-arrow" aria-hidden="true"
-                style="-webkit-mask-image: url('./src/Assets/icons/keyboard_arrow.svg'); mask-image: url('./src/Assets/icons/keyboard_arrow.svg');"></span>
-            </button>
-            <div class="dropdown-content open">
-              <button data-target="soal-1" class="subtopic-btn">Soal 1</button>
-              <button data-target="soal-2" class="subtopic-btn">Soal 2</button>
+            <div class="dropdown-content">
+              <button data-topic="contoh_soal" class="subtopic-btn">Contoh Soal</button>
             </div>
           </div>
 
@@ -113,7 +102,7 @@
     </aside>
     <section class="materi-content" aria-live="polite">
       <div class="glass-card materi-content__card">
-        <div id="content-area" class="space-y-12"></div>
+        <div id="content-area" class="content-area"></div>
         <div class="materi-nav">
           <div id="prev-btn-container"></div>
           <div id="next-btn-container"></div>
