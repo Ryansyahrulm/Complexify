@@ -15,12 +15,12 @@ const revealObserver = new IntersectionObserver(
 );
 
 const teamMembers = [
-  { name: 'Wijdan Maula Hidayat', role: 'UI/UX', photo: 'wijdan.jpeg' },
+  { name: 'Wijdan Maula Hidayat', role: 'UI/UX Designer', photo: 'wijdan.jpeg' },
   { name: 'Ryan Syahrul Muharam', role: 'Developer', photo: 'ryan.jpeg' },
   { name: 'Fahmi Miftahudin', role: 'Penyusun Materi & Kuis', photo: 'fahmi.jpeg' },
   { name: 'Muhammad Rizki Fadlillah', role: 'Developer', photo: 'rizki.jpeg' },
   { name: 'Muhammad Syakirul Yaqzhan', role: 'Developer', photo: 'syakirul.jpeg' },
-  { name: 'Wahyu Aldhy Rachmansyah', role: 'UI/UX', photo: 'wahyu.jpeg' },
+  { name: 'Wahyu Aldhy Rachmansyah', role: 'UI/UX Designer', photo: 'wahyu.jpeg' },
   { name: 'Alfidi Rahadianto', role: 'Penyusun Materi & Kuis', photo: 'alfidi.jpeg' }
 ];
 
