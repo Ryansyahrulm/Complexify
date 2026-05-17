@@ -21,7 +21,7 @@ const teamMembers = [
   { name: 'Muhammad Rizki Fadlillah', role: 'Developer', photo: 'rizki.jpeg' },
   { name: 'Muhammad Syakirul Yaqzhan', role: 'Developer', photo: 'syakirul.jpeg' },
   { name: 'Wahyu Aldhy Rachmansyah', role: 'UI/UX', photo: 'wahyu.jpeg' },
-  { name: 'Alfidi Rahadianto', role: 'Penyusun Materi & Kuis', photo: '#' }
+  { name: 'Alfidi Rahadianto', role: 'Penyusun Materi & Kuis', photo: 'alfidi.jpeg' }
 ];
 
 const teamContainer = document.getElementById('team-grid');
