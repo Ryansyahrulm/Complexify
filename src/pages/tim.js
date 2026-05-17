@@ -15,13 +15,13 @@ const revealObserver = new IntersectionObserver(
 );
 
 const teamMembers = [
-  { name: 'Wijdan Maula Hidayat', role: 'Presiden', photo: 'wijdan.jpeg' },
-  { name: 'Ryan Syahrul Muharam', role: 'Presiden', photo: 'ryan.jpeg' },
-  { name: 'Fahmi Miftahudin', role: 'Presiden', photo: 'fahmi.jpeg' },
-  { name: 'Muhammad Rizki Fadlillah', role: 'Presiden', photo: 'rizki.jpeg' },
-  { name: 'Muhammad Syakirul Yaqzhan', role: 'Presiden', photo: '#' },
-  { name: 'Wahyu Aldhy Rachmansyah', role: 'Presiden', photo: 'wahyu.jpeg' },
-  { name: 'Alfidi Rahadianto', role: 'Presiden', photo: '#' }
+  { name: 'Wijdan Maula Hidayat', role: 'UI/UX', photo: 'wijdan.jpeg' },
+  { name: 'Ryan Syahrul Muharam', role: 'Developer', photo: 'ryan.jpeg' },
+  { name: 'Fahmi Miftahudin', role: 'Penyusun Materi & Kuis', photo: 'fahmi.jpeg' },
+  { name: 'Muhammad Rizki Fadlillah', role: 'Developer', photo: 'rizki.jpeg' },
+  { name: 'Muhammad Syakirul Yaqzhan', role: 'Developer', photo: 'syakirul.jpeg' },
+  { name: 'Wahyu Aldhy Rachmansyah', role: 'UI/UX', photo: 'wahyu.jpeg' },
+  { name: 'Alfidi Rahadianto', role: 'Penyusun Materi & Kuis', photo: '#' }
 ];
 
 const teamContainer = document.getElementById('team-grid');
